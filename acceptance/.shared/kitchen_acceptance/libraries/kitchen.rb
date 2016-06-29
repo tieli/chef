@@ -49,6 +49,7 @@ module KitchenAcceptance
       ruby_block "copy_kitchen_logs_to_data_path" do
         block do
           suite = kitchen_dir.split("/").last
+          FileUtils.mkdir_p("#{kitchen_dir}/../.acceptance_data/logs/#{suite}")
           FileUtils.cp_r("#{kitchen_dir}/.kitchen/logs/", "#{kitchen_dir}/../.acceptance_data/logs/#{suite}")
         end
       end
