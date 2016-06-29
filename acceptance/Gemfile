@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "chef-acceptance", github: "chef/chef-acceptance"
+gem "chef-acceptance", github: "chef/chef-acceptance", branch: "praj/FLOW-370/acceptance_logging"
 gem "test-kitchen"
 gem "kitchen-ec2"
 gem "kitchen-inspec"
